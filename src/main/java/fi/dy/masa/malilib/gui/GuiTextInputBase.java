@@ -1,6 +1,6 @@
 package fi.dy.masa.malilib.gui;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.Screen;
 import fi.dy.masa.malilib.gui.button.ButtonBase;

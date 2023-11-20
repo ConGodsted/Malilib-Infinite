@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 import fi.dy.masa.malilib.MaLiLibConfigs;
 
 public class StringUtils
@@ -76,7 +76,7 @@ public class StringUtils
         net.minecraft.text.Text name = new net.minecraft.text.LiteralText(file.getName());
         name.getStyle().setClickEvent(new net.minecraft.text.ClickEvent(net.minecraft.text.ClickEvent.Action.OPEN_FILE, file.getAbsolutePath()));
         name.getStyle().setUnderline(Boolean.valueOf(true));
-        sender.sendSystemMessage(new net.minecraft.text.TranslatableText(messageKey, name));
+        sender.sendMessage(new net.minecraft.text.TranslatableText(messageKey, name));
     }
 
     /**
@@ -277,9 +277,7 @@ public class StringUtils
 
             if (server != null)
             {
-                // This used to be just MinecraftServer::getLevelName().
-                // Getting the name would now require an @Accessor for MinecraftServer.field_23784
-                return server.method_27050().getFileName().toString(); 
+                return server.getLevelName();
             }
         }
         else

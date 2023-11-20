@@ -1,6 +1,6 @@
 package fi.dy.masa.malilib.gui;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 import fi.dy.masa.malilib.interfaces.IStringConsumerFeedback;
 import net.minecraft.client.gui.screen.Screen;
 

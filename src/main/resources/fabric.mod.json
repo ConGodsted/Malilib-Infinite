@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "malilib",
   "name": "MaLiLib",
-  "version": "${mod_version}",
+  "version": "0.10.0-dev.20+infinite",
 
   "description": "A library mod required by masa's client-side mods",
   "authors": [
@@ -33,5 +33,10 @@
 
   "depends": {
     "fabric-resource-loader-v0": "*"
+  },
+
+  "custom": {
+    "modmenu:api": true,
+    "modmenu:clientsideOnly": true
   }
 }

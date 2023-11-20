@@ -1,7 +1,7 @@
 package fi.dy.masa.malilib.gui;
 
 import java.awt.Color;
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -777,7 +777,8 @@ public class GuiColorEditorHSV extends GuiDialogBase
     protected static class TextFieldListener implements ITextFieldListener<GuiTextFieldGeneric>
     {
         protected final GuiColorEditorHSV gui;
-        @Nullable protected final Element type;
+        @Nullable
+        protected final Element type;
 
         protected TextFieldListener(@Nullable Element type, GuiColorEditorHSV gui)
         {
